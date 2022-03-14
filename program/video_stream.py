@@ -123,7 +123,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
                 Q = int(pq)
             else:
                 await loser.edit(
-                    "start streaming the local video in 720p quality"
+                    "sᴛᴀʀᴛ sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ʟᴏᴄᴀʟ ᴠɪᴅᴇᴏ ɪɴ 720ᴘ ǫᴜᴀʟɪᴛʏ"
                 )
         try:
             if replied.video:
@@ -135,7 +135,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
             songname = "video"
 
         if chat_id in QUEUE:
-            await loser.edit("🔄 Queueing Track...")
+            await loser.edit("🔄 ǫᴜᴇᴜɪɴɢ ᴛʀᴀᴄᴋ...")
             gcname = m.chat.title
             ctitle = await CHAT_TITLE(gcname)
             title = songname
@@ -149,15 +149,15 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
             await m.reply_photo(
                 photo=image,
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"💡 **Track added to queue »** `{pos}`\n\n"
-                        f"🗂 **Name:** [{songname}]({link}) | `video`\n"
-                        f"⏱️ **Duration:** `{duration}`\n"
-                        f"🧸 **Request by:** {requester}",
+                caption=f"💡 **ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{pos}`\n\n"
+                        f"🗂 **ɴᴀᴍᴇ:** [{songname}]({link}) | `video`\n"
+                        f"⏱️ **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`\n"
+                        f"🧸 **ʀᴇǫᴜᴇsᴛ ʙʏ:** {requester}",
             )
             remove_if_exists(image)
         else:
             try:
-                await loser.edit("🔄 Joining Group Call...")
+                await loser.edit("🔄 ᴊᴏɪɴɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...")
                 gcname = m.chat.title
                 ctitle = await CHAT_TITLE(gcname)
                 title = songname
@@ -188,9 +188,9 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
                 await m.reply_photo(
                     photo=image,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"🗂 **Name:** [{songname}]({link}) | `video`\n"
-                            f"⏱️ **Duration:** `{duration}`\n"
-                            f"🧸 **Request by:** {requester}",
+                    caption=f"🗂 **ɴᴀᴍᴇ:** [{songname}]({link}) | `video`\n"
+                            f"⏱️ **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`\n"
+                            f"🧸 **ʀᴇǫᴜᴇsᴛ ʙʏ:** {requester}",
                 )
                 remove_if_exists(image)
             except (NoActiveGroupCall, GroupCallNotFound):
@@ -294,12 +294,12 @@ async def video_stream(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=InlineKeyboardMarkup(buttons),
-                                caption=f"💡 **Track added to queue »** `{pos}`\n\n🗂 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                                caption=f"💡 **ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{pos}`\n\n🗂 **ɴᴀᴍᴇ:** [{songname}]({url}) | `video`\n⏱ **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`\n🧸 **ʀᴇǫᴜᴇsᴛ ʙʏ:** {requester}",
                             )
                             remove_if_exists(image)
                         else:
                             try:
-                                await loser.edit("🔄 Joining Group Call...")
+                                await loser.edit("🔄 ᴊᴏɪɴɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...")
                                 await music_on(chat_id)
                                 await add_active_chat(chat_id)
                                 await calls.join_group_call(
@@ -318,7 +318,7 @@ async def video_stream(c: Client, m: Message):
                                 await m.reply_photo(
                                     photo=image,
                                     reply_markup=InlineKeyboardMarkup(buttons),
-                                    caption=f"🗂 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                                    caption=f"🗂 **ɴᴀᴍᴇ:** [{songname}]({url}) | `video`\n⏱ **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`\n🧸 **ʀᴇǫᴜᴇsᴛ ʙʏ:** {requester}",
                                 )
                                 remove_if_exists(image)
                             except (NoActiveGroupCall, GroupCallNotFound):
@@ -373,12 +373,12 @@ async def video_stream(c: Client, m: Message):
                         await m.reply_photo(
                             photo=image,
                             reply_markup=InlineKeyboardMarkup(buttons),
-                            caption=f"💡 **Track added to queue »** `{pos}`\n\n🗂 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                            caption=f"💡 **ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{pos}`\n\n🗂 **ɴᴀᴍᴇ:** [{songname}]({url}) | `video`\n⏱ **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`\n🧸 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:** {requester}",
                         )
                         remove_if_exists(image)
                     else:
                         try:
-                            await loser.edit("🔄 Joining Group Call...")
+                            await loser.edit("🔄 ᴊᴏɪɴɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...")
                             await music_on(chat_id)
                             await add_active_chat(chat_id)
                             await calls.join_group_call(
@@ -397,7 +397,7 @@ async def video_stream(c: Client, m: Message):
                             await m.reply_photo(
                                 photo=image,
                                 reply_markup=InlineKeyboardMarkup(buttons),
-                                caption=f"🗂 **Name:** [{songname}]({url}) | `video`\n⏱ **Duration:** `{duration}`\n🧸 **Request by:** {requester}",
+                                caption=f"🗂 **ɴᴀᴍᴇ:** [{songname}]({url}) | `video`\n⏱ **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`\n🧸 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:** {requester}",
                             )
                             remove_if_exists(image)
                         except (NoActiveGroupCall, GroupCallNotFound):
@@ -508,7 +508,7 @@ async def live_video_stream(c: Client, m: Message):
                     await m.reply_photo(
                         photo=f"{IMG_1}",
                         reply_markup=InlineKeyboardMarkup(buttons),
-                        caption=f"💡 **Track added to queue »** `{pos}`\n\n🗂 **Name:** [m3u8 video stream]({url}) | `live`\n🧸 **Requested by:** {requester}",
+                        caption=f"💡 **ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{pos}`\n\n🗂 **ɴᴀᴍᴇ:** [m3u8 video stream]({url}) | `live`\n🧸 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:** {requester}",
                     )
                 else:
                     if Q == 720:
@@ -518,7 +518,7 @@ async def live_video_stream(c: Client, m: Message):
                     elif Q == 360:
                         amaze = LowQualityVideo
                     try:
-                        await loser.edit("🔄 Joining Group Call...")
+                        await loser.edit("🔄 ᴊᴏɪɴɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...")
                         await music_on(chat_id)
                         await add_active_chat(chat_id)
                         await calls.join_group_call(
@@ -599,7 +599,7 @@ async def live_video_stream(c: Client, m: Message):
                         await m.reply_photo(
                             photo=image,
                             reply_markup=InlineKeyboardMarkup(buttons),
-                            caption=f"🗂 **Name:** [{songname}]({url}) | `live`\n🧸 **Requested by:** {requester}",
+                            caption=f"🗂 **ɴᴀᴍᴇ:** [{songname}]({url}) | `live`\n🧸 **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:** {requester}",
                         )
                         remove_if_exists(image)
                     except (NoActiveGroupCall, GroupCallNotFound):
