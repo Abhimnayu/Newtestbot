@@ -17,7 +17,7 @@ BOT_USERNAME = getenv("BOT_USERNAME")
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/Abhimanyu/Newtestbot")
 UPSTREAM_BRANCH = getenv("UPSTREM_BRANCH", "main")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "900"))
-GROUP_SUPPORT = getenv("GROUP_SUPPORT", "AlishaSupport")
+GROUP_SUPPORT = getenv("GROUP_SUPPORT", "Alisha_Support")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "Pubglovers_Shayri_lovers")
 
 # database, decorators, handlers mandatory vars
