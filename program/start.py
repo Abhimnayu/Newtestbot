@@ -93,11 +93,11 @@ async def start_(c: Client, message: Message):
 ᴀʟʟ ᴏꜰ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ : /
 ┏━━━━━━━━━━━━━━┓
 ┣★
-┣★ ᴄʀᴇᴀᴛᴏʀ: [🖤 ᴀʙʜɪᴍᴀɴʏᴜ 🖤](t.me/Itz_VeNom_xD)
+┣★ ᴄʀᴇᴀᴛᴏʀ: [🖤 ᴀʙʜɪᴍᴀɴʏᴜ 🖤](t.me/venom_ha1n_hum)
 ┣★
 ┗━━━━━━━━━━━━━━┛
 
-💞 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ ᴅᴍ ᴛᴏ ᴍʏ [ᴏᴡɴᴇʀ](t.me/Itz_VeNom_xD) ʙᴀʙʏ...
+💞 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ ᴅᴍ ᴛᴏ ᴍʏ [ᴏᴡɴᴇʀ](t.me/venom_ha1n_hum) ʙᴀʙʏ...
 ━━━━━━━━━━━━━━━━━━**""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -109,7 +109,7 @@ async def start_(c: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton("🦋 ʜᴇʟᴘ ", callback_data="command_list"),
-                    InlineKeyboardButton("ᴏᴡɴᴇʀ 🦋", url=f"https://t.me/Itz_VeNom_xD"),
+                    InlineKeyboardButton("ᴏᴡɴᴇʀ 🦋", url=f"https://t.me/venom_ha1n_hum"),
                 ],
                 [
                     InlineKeyboardButton(
