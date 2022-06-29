@@ -49,14 +49,14 @@ async def thumb(thumbnail, title, userid, ctitle):
     font2 = ImageFont.truetype("driver/source/medium.ttf", 52)
     draw.text(
         (25, 615),
-        f"{title[:20]}...",
-        fill="black",
+        f"{title[:5]}...",
+        fill="white",
         font=font2,
     )
     draw.text(
         (27, 543),
         f"Playing on {ctitle[:12]}",
-        fill="green",
+        fill="white",
         font=font,
     )
     img.save(f"search/final{userid}.png")
