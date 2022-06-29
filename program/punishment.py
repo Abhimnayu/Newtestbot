@@ -61,7 +61,7 @@ async def global_banned(c: Client, message: Message):
             for chat in chats:
                 served_chats.append(int(chat["chat_id"]))
             m = await message.reply_text(
-                f"🚷 **Globally banning {user.mention}**\n⏱ Expected time: `{len(served_chats)}`"
+                f"🚷 **Gʟᴏʙᴀʟʟʏ ʙᴀɴɴɪɴɢ {user.mention}**\n⏱ Exᴘᴇᴄᴛᴇᴅ ᴛɪᴍᴇ: `{len(served_chats)}`"
             )
             number_of_chats = 0
             for num in served_chats:
@@ -74,13 +74,13 @@ async def global_banned(c: Client, message: Message):
                 except Exception:
                     pass
             ban_text = f"""
-🚷 **New Global ban on [{BOT_NAME}](https://t.me/{bn})
+🚷 **Nᴇᴡ ɢʟᴏʙᴀʟ ʙᴀɴ ᴏɴ [{BOT_NAME}](https://t.me/{bn})
 
-**Origin:** {message.chat.title} [`{message.chat.id}`]
-**Sudo User:** {from_user.mention}
-**Banned User:** {user.mention}
-**Banned User ID:** `{user.id}`
-**Chats:** `{number_of_chats}`"""
+**Oʀɪɢɪɴ:** {message.chat.title} [`{message.chat.id}`]
+**Sᴜᴅᴏ ᴜsᴇʀ:** {from_user.mention}
+**Bᴀɴɴᴇᴅ ᴜsᴇʀ:** {user.mention}
+**Bᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅ:** `{user.id}`
+**Cʜᴀᴛs:** `{number_of_chats}`"""
             try:
                 await m.delete()
             except Exception:
@@ -114,7 +114,7 @@ async def global_banned(c: Client, message: Message):
             for chat in chats:
                 served_chats.append(int(chat["chat_id"]))
             m = await message.reply_text(
-                f"🚷 **Globally banning {mention}**\n⏱ Expected time: `{len(served_chats)}`"
+                f"🚷 **Gʟᴏʙᴀʟʟʏ ʙᴀɴɴɪɴɢ {mention}**\n⏱ Exᴘᴇᴄᴛᴇᴅ ᴛɪᴍᴇ: `{len(served_chats)}`"
             )
             number_of_chats = 0
             for num in served_chats:
@@ -127,13 +127,13 @@ async def global_banned(c: Client, message: Message):
                 except Exception:
                     pass
             ban_text = f"""
-🚷 **New Global ban on [{BOT_NAME}](https://t.me/{bn})
+🚷 **Nᴇᴡ ɢʟᴏʙᴀʟ ʙᴀɴ ᴏɴ [{BOT_NAME}](https://t.me/{bn})
 
-**Origin:** {message.chat.title} [`{message.chat.id}`]
-**Sudo User:** {from_user_mention}
-**Banned User:** {mention}
-**Banned User ID:** `{user_id}`
-**Chats:** `{number_of_chats}`"""
+**Oʀɪɢɪɴ:** {message.chat.title} [`{message.chat.id}`]
+**Sᴜᴅᴏ ᴜsᴇʀ:** {from_user_mention}
+**Bᴀɴɴᴇᴅ ᴜsᴇʀ:** {mention}
+**Bᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅ:** `{user_id}`
+**Cʜᴀᴛs:** `{number_of_chats}`"""
             try:
                 await m.delete()
             except Exception:
@@ -172,9 +172,9 @@ async def ungban_global(c: Client, message: Message):
         else:
             is_gbanned = await is_gbanned_user(user.id)
             if not is_gbanned:
-                await message.reply_text("This user is not gbanned !")
+                await message.reply_text("Tʜɪs ᴜsᴇʀ ɪs ɴᴏᴛ ɢʙᴀɴɴᴇᴅ !")
             else:
-                msg = await message.reply_text("» ungbanning user...")
+                msg = await message.reply_text("» Uɴɢʙᴀɴɴɪɴɢ ᴜsᴇʀ...")
                 await remove_gban_user(user.id)
                 served_chats = []
                 chats = await get_served_chats()
@@ -190,7 +190,7 @@ async def ungban_global(c: Client, message: Message):
                         await asyncio.sleep(int(e.x))
                     except BaseException:
                         pass
-                await msg.edit_text("✅ This user has ungbanned")
+                await msg.edit_text("✅ Tʜɪs ᴜsᴇʀ ɪs ᴜɴɢʙʙᴀɴɴᴇᴅ")
         return
     from_user_id = message.from_user.id
     user_id = message.reply_to_message.from_user.id
@@ -207,9 +207,9 @@ async def ungban_global(c: Client, message: Message):
     else:
         is_gbanned = await is_gbanned_user(user_id)
         if not is_gbanned:
-            await message.reply_text("This user is not gbanned !")
+            await message.reply_text("Tʜɪs ᴜsᴇʀ ɪs ɴᴏᴛ ɢʙᴀɴɴᴇᴅ !")
         else:
-            msg = await message.reply_text("» ungbanning user...")
+            msg = await message.reply_text("» Uɴɢʙᴀɴɴɪɴɢ ᴜsᴇʀ...")
             await remove_gban_user(user_id)
             served_chats = []
             chats = await get_served_chats()
@@ -225,4 +225,4 @@ async def ungban_global(c: Client, message: Message):
                     await asyncio.sleep(int(e.x))
                 except BaseException:
                     pass
-                await msg.edit_text("✅ This user has ungbanned")
+                await msg.edit_text("✅ Tʜɪs ᴜsᴇʀ ʜᴀs ᴜɴɢʙᴀɴɴᴇᴅ")
