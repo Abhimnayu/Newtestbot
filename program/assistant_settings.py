@@ -56,9 +56,9 @@ async def join_chat(c: Client, m: Message):
             )
         await user.join_chat(invitelink)
         await remove_active_chat(chat_id)
-        return await user.send_message(chat_id, "✅ userbot joined this chat")
+        return await user.send_message(chat_id, "✅ Assɪsᴛᴀɴᴛ ʜᴀs ᴊᴏɪɴᴇᴅ ᴛʜɪs ɢʀᴏᴜᴘ")
     except UserAlreadyParticipant:
-        return await user.send_message(chat_id, "✅ userbot already in this chat")
+        return await user.send_message(chat_id, "✅ ᴀssɪsᴛᴀɴʏ ʜᴀs ᴀʟʀᴇᴀᴅʏ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ")
 
 
 @Client.on_message(
@@ -72,12 +72,12 @@ async def leave_chat(c :Client, m: Message):
         if chat_id in QUEUE:
             await remove_active_chat(chat_id)
             await user.leave_chat(chat_id)
-            return await c.send_message(chat_id, "✅ userbot has left from chat")
+            return await c.send_message(chat_id, "✅ ᴀssɪsᴛᴀɴᴛ ʜᴀs ʟᴇғᴛ ᴛʜɪs ᴄʜᴀᴛ")
         else:
             await user.leave_chat(chat_id)
-            return await c.send_message(chat_id, "✅ userbot has left from chat")
+            return await c.send_message(chat_id, "✅ ᴀssɪsᴛᴀɴᴛ ʜᴀs ʟᴇғᴛ ғʀᴏᴍ ᴛʜɪs ᴄʜᴀᴛ")
     except UserNotParticipant:
-        return await c.send_message(chat_id, "❌ userbot already leave chat")
+        return await c.send_message(chat_id, "❌ ᴀssɪsᴛᴀɴʏ ᴀʟʀᴇᴀᴅʏ ʟᴇᴀᴠᴇ ᴛʜɪs ᴄʜᴀᴛ")
 
 
 @Client.on_message(command(["leaveall", f"leaveall@{BOT_USERNAME}"]) & ~filters.edited)
@@ -125,7 +125,7 @@ async def start_group_call(c: Client, m: Message):
                 random_id=user.rnd_id() // 9000000000,
             )
         )
-        await msg.edit_text("✅ Group call started !")
+        await msg.edit_text("✅ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ sᴛᴀʀᴛᴇᴅ !")
     except ChatAdminRequired:
         await msg.edit_text(
             "The userbot is not admin in this chat. To start the Group call you must promote the userbot as admin first with permission:\n\n» ❌ manage_video_chats"
@@ -137,21 +137,21 @@ async def start_group_call(c: Client, m: Message):
 @authorized_users_only
 async def stop_group_call(c: Client, m: Message):
     chat_id = m.chat.id
-    msg = await c.send_message(chat_id, "`stopping...`")
+    msg = await c.send_message(chat_id, "`Sᴛᴏᴘᴘɪɴɢ...`")
     try:
         if not (
             group_call := (
-                await get_calls(m, err_msg="group call not active")
+                await get_calls(m, err_msg="ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ɴᴏᴛ ᴀᴄᴛɪᴠᴇ")
             )
         ):
-            await msg.edit_text("❌ The group call already ended")
+            await msg.edit_text("❌ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴀʟʀᴇᴀᴅʏ ᴇɴᴅᴇᴅ")
             return
         await user.send(
             DiscardGroupCall(
                 call=group_call
             )
         )
-        await msg.edit_text("✅ Group call has ended !")
+        await msg.edit_text("✅ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ʜᴀs ᴇɴᴅᴇᴅ !")
     except Exception as e:
         if "GROUPCALL_FORBIDDEN" in str(e):
             await msg.edit_text(
