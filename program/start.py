@@ -75,8 +75,9 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@app.on_message(filters.command("start") & filters.private & ~filters.edited)
-async def useradd(_, message: Message):
+@Client.on_message(command("start") & filters.private & ~filters.group & ~filters.edited)
+
+async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/4c7025b0b94c0d2b5f94a.jpg",
         caption=f"""**━━━━━━━━━━━━━━━━━━
