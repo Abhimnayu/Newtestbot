@@ -56,7 +56,7 @@ async def thumb(thumbnail, title, userid, ctitle):
     draw.text(
         (27, 543),
         f"Playing on {ctitle[:12]}",
-        fill="black",
+        fill="green",
         font=font,
     )
     img.save(f"search/final{userid}.png")
