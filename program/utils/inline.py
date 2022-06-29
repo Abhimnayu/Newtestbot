@@ -11,7 +11,7 @@ def stream_markup(user_id):
   buttons = [
     [
       InlineKeyboardButton(text="• Mᴇɴᴜ", callback_data=f'stream_menu_panel | {user_id}'),
-      InlineKeyboardButton(text="• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Alisha_Support'),
+      InlineKeyboardButton(text="• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Alisha_Support"),
     ],
   ]
   return buttons
