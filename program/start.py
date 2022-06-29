@@ -195,7 +195,7 @@ async def new_chat(c: Client, m: Message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("ᴀʟɪsʜᴀ sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/AlishaSupport"),
+                                InlineKeyboardButton("ᴀʟɪsʜᴀ sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Alisha_Support"),
                                 InlineKeyboardButton("ᴄʜᴀᴛᴛɪɴɢ ɢʀᴏᴜᴘ", url=f"https://t.me/Shayri_Music_Lovers")
                             ],[
                                 InlineKeyboardButton("👤 ᴀssɪsᴛᴀɴᴛ", url=f"https://t.me/{me_user.username}")
