@@ -26,7 +26,7 @@ keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(text="• Mᴇɴᴜ", callback_data="stream_menu_panel"),
-            InlineKeyboardButton(text="• Cʟᴏsᴇ", callback_data="set_close"),
+            InlineKeyboardButton(text="• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Alisha_Support"),
         ]
     ]
 )
